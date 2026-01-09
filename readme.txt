@@ -43,7 +43,7 @@ In order to change the styling used throughout the site, use **Brizy**.
 = 1.0.3 =
 * Released: January 9, 2026
 
-* Changed theme name to "Brizy Starter"
+* Added PHP 8 compatibility
 
 = 1.0.2 =
 * Released: January 9, 2026

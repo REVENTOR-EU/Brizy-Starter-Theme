@@ -120,26 +120,6 @@ We welcome contributions! Please follow these steps:
 
 ---
 
-## 📋 Changelog
-
-### 1.0.2 - January 9, 2026
-
-- Removed Brizy Pro plugin recommendation
-- Removed One Click Demo Import plugin recommendation
-- Tested up to WordPress 7.0
-
-### 1.0.1 - February 21, 2019
-
-- Added TGM to import required plugins
-- Possibility to Import Demo with One Click Demo Import plugin
-- Authors filters
-
-### 1.0 - January 16, 2019
-
-- Initial release
-
----
-
 ## 📄 License
 
 This theme is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
