@@ -23,15 +23,15 @@
 	if ( $description || is_customize_preview() ) :
 		?>
 			<p class="site-description">
-				<?php echo $description; ?>
+				<?php echo esc_html( $description ); ?>
 			</p>
 	<?php endif; ?>
-	<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+	<?php if ( has_nav_menu( 'primary' ) ) : ?>
+		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'brizy-starter' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'menu-1',
+					'theme_location' => 'primary',
 					'menu_class'     => 'main-menu',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s" tabindex="0">%3$s</ul>',
 				)

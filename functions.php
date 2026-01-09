@@ -61,15 +61,6 @@ if ( ! function_exists( 'brizy_starter_theme_setup' ) ) {
 	        */
 	       add_theme_support( 'align-wide' );
 
-        /**
-         * No need for default images as Brizy generates its own.
-         */
-        remove_image_size('medium_large');
-        add_image_size('medium_large', 150, 150, true);
-        remove_image_size('medium');
-        add_image_size('medium', 150, 150, true);
-        remove_image_size('large');
-        add_image_size('large', 150, 150, true);
 
         register_nav_menus(
             array(
@@ -278,43 +269,6 @@ if ( ! function_exists( 'brizy_starter_theme_comment_count' ) ) :
     }
 endif;
 
-/**
- * After Import Setup
- *
- * Set the Classic Home Page as front
- * page and assign the menu to
- * the main menu location.
- */
-add_action('pt-ocdi/after_import', 'brizy_ocdi_after_import_setup');
-function brizy_ocdi_after_import_setup() {
-    $primary_menu = get_term_by('name', 'Primary Menu', 'nav_menu');
-    if (!$primary_menu) {
-        $primary_menu = get_term_by('name', 'Main Menu', 'nav_menu');
-    }
-    if ($primary_menu) {
-        set_theme_mod('nav_menu_locations', array('primary' => $primary_menu->term_id));
-    }
-
-    $secondary_menu = get_term_by('name', 'Secondary Menu', 'nav_menu');
-    if ($secondary_menu) {
-        set_theme_mod('nav_menu_locations', array('secondary' => $secondary_menu->term_id));
-    }
-
-    $footer_menu = get_term_by('name', 'Footer Menu', 'nav_menu');
-    if ($footer_menu) {
-        set_theme_mod('nav_menu_locations', array('footer' => $footer_menu->term_id));
-    }
-
-    $front_page_id = get_page_by_title('Home') ?  : get_page_by_title('Homepage');
-    if ($front_page_id) {
-        update_option('page_on_front', $front_page_id->ID);
-        update_option('show_on_front', 'page');
-    }
-    $blog_page_id = get_page_by_title('Blog');
-    if ($blog_page_id) {
-        update_option('page_for_posts', $blog_page_id->ID);
-    }
-}
 
 if ( ! function_exists( 'brizy_starter_theme_register_sidebar' ) ) :
     function brizy_starter_theme_register_sidebar() {

@@ -5,9 +5,10 @@ Requires at least: WordPress 6.0
 Tested up to: WordPress 7.0
 Stable tag: 1.0.3
 Version: 1.0.3
+Requires PHP: 7.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Tags: custom-logo, featured-images, threaded-comments, translation-ready
+Tags: custom-colors, custom-menu, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready
 Author URI: https://reventor.eu
 Theme URI: https://github.com/REVENTOR-EU/Brizy-Starter-Theme
 

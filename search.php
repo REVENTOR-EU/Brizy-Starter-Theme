@@ -13,9 +13,9 @@ get_header();
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php _e( 'Search results for:', 'brizy-starter' ); ?>
+					<?php esc_html_e( 'Search results for:', 'brizy-starter' ); ?>
 				</h1>
-				<div class="page-description"><?php echo get_search_query(); ?></div>
+				<div class="page-description"><?php echo esc_html( get_search_query() ); ?></div>
 			</header><!-- .page-header -->
 
 			<?php
